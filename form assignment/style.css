@@ -1,0 +1,48 @@
+.my-box {
+  background-color: whitesmoke;
+  padding-top: 2px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 10px;
+  max-width: 1000px;
+  margin-top: 100px;
+  border-radius: 8px;
+}
+
+.table{
+   
+    display: flex;
+    justify-content: center;
+}
+
+.arrange{
+  
+    padding-left: 150px;
+    margin-top: -80px;
+}
+
+.qualify{
+   padding-bottom: -200px;
+}
+.submit{
+    display: flex;
+    justify-content: center;
+}
+.form{
+ background-color: #f5eff4;
+ display: flex;
+ justify-content: center;
+ margin-top: 20px;
+ padding-top: 10px;
+ padding-bottom: 20px;
+ border-radius: 8px;
+ padding-left: -30px;
+}
+
+.student{
+    display: flex;
+    justify-content: center;
+    color: #6A5ACD;
+    font-weight: bold;
+    text-decoration: underline;
+}

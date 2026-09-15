@@ -1,0 +1,26 @@
+Step 1: Find the variable that controls the number of tickets:in this question 'totalTickets' is the variable thatcontrols the number of ticket
+
+ const totalTickets = 13;
+
+Step 2: We Change that variable value from 13 to 50, since the school now has 50 students:
+
+ const totalTickets = 50;
+
+Step 3: No other line needs to change the rest of the script already uses the variable totalTickets by name,
+ so when the varaible 'totalTickets' is called the computer already know and say
+ HEY i already have a variable with that name so it automatically adjusts to the assigned value in this case 50
+
+ const winningTicket = Math.floor(Math.random() * totalTickets) + 1;
+
+                ANS (FULLY CORRECTED SCRIPT WITH STEPS TAKEN TO CHANGE THE SCRIPT SO IT WORKS FOR A RAFFEL WITH 50 STUDEBTS)
+
+
+// Step 1: Define the total number of raffle tickets sold
+const totalTickets = 50;
+
+// Step 2: Calculate the winning ticket number
+const winningTicket = Math.floor(Math.random() * totalTickets) + 1;
+
+// Step 3: Announce the winner!
+console.log(" Drawing the winning raffle ticket...");
+console.log(` Congratulations to the holder of Ticket Number: ${winningTicket}!`);

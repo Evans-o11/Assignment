@@ -1,0 +1,43 @@
+body{
+    margin: 0;                   
+    display: flex;               
+    flex-direction: column;      
+    justify-content: center;    
+    align-items: center;         
+    min-height: 100vh;           
+    text-align: center;
+}
+.grid{
+    width: 60vw;
+    height: 70vh;
+    margin: 0;
+    display: grid; 
+    grid-template-columns: repeat(6, 1fr); 
+    grid-template-areas: 
+    "area-a area-a area-e area-i area-j area-j"
+    "area-a area-a area-e area-h area-k area-l"
+    "area-b area-b area-f area-h area-m area-m"
+    "area-c area-d area-f area-g area-m area-m"
+    ;
+    grid-template-rows: auto;
+    gap: 10px;
+}
+img{
+    width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  display: block;
+}
+.item-1{grid-area: area-a;}
+.item-2{grid-area: area-b;}
+.item-3{grid-area: area-c;}
+.item-4{grid-area: area-d;}
+.item-5{grid-area: area-e;}
+.item-6{grid-area: area-f;}
+.item-7{grid-area: area-g;}
+.item-8{grid-area: area-h;}
+.item-9{grid-area: area-i;}
+.item-10{grid-area: area-j;}
+.item-11{grid-area: area-k;}
+.item-12{grid-area: area-l;}
+.item-13{grid-area: area-m;}

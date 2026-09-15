@@ -1,0 +1,234 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(218, 216, 216);
+  line-height: 1.6;
+  padding: 20px;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.line {
+  color: orange;
+  font-weight: bolder;
+  font-size: 16px;
+}
+.logo-text {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 16px;
+  font-weight: bold;
+  color: #7580c1;
+}
+h4 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 80px;
+  line-height: 1;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  transform-origin: left center;
+  display: inline-block;
+  transform: scaleX(0.7);
+}
+.line-1,
+.line-2,
+.line-3 {
+  display: flex;
+  border-bottom: 1px solid gainsboro;
+  gap: 10px;
+  padding-bottom: 15px;
+}
+.line-2,
+.line-3 {
+  margin-top: 50px;
+}
+
+.list {
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #0b1a30;
+  margin-bottom: 6px;
+}
+.list-decription {
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #64748b;
+}
+.box-1 {
+  position: relative;
+  width: 500px;
+  padding-left: 20px;
+  transform: rotate(-4deg);
+}
+img {
+  width: 500px;
+  height: auto;
+}
+.box-2 {
+  position: absolute;
+  bottom: -40px;
+  right: -130px;
+  width: 250px;
+  height: 180px;
+  background: #fefefe;
+  border: 5px solid white;
+  border-radius: 40px;
+  transform: rotate(8deg);
+  padding-left: 30px;
+}
+.number {
+  font-size: 50px;
+  font-weight: bold;
+  font-family: "Playfair Display", Georgia, serif;
+}
+.grid-container {
+  padding: 50px;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "area-a area-b";
+}
+.item-1 {
+  grid-area: area-a;
+}
+.item-2 {
+  grid-area: area-b;
+}
+/* Tablets and small laptops */
+@media (max-width: 1024px) {
+  .grid-container {
+    gap: 40px;
+  }
+
+  .box-1 {
+    width: 450px;
+  }
+
+  img {
+    width: 450px;
+  }
+
+  .box-2 {
+    width: 230px;
+    height: 170px;
+    right: -100px;
+    bottom: -35px;
+  }
+}
+
+/* Tablets portrait / iPad Mini */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "area-a"
+      "area-b";
+    padding: 20px;
+    gap: 40px;
+  }
+
+  .box-1 {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  .box-2 {
+    width: 250px;
+    height: 190px;
+    right: -10px;
+    bottom: -20px;
+    padding-left: 20px;
+  }
+
+  h4 {
+    font-size: 48px;
+  }
+}
+
+/* Large phones */
+@media (max-width: 600px) {
+  .box-1 {
+    max-width: 340px;
+  }
+
+  .box-2 {
+    width: 210px;
+    height: 170px;
+    right: -5px;
+    bottom: -15px;
+    padding-left: 18px;
+  }
+
+  .number {
+    font-size: 40px;
+  }
+}
+
+/* Small/standard phones */
+@media (max-width: 480px) {
+  .box-1 {
+    max-width: 280px;
+  }
+
+  .box-2 {
+    width: 190px;
+    height: 160px;
+    right: -5px;
+    bottom: -15px;
+    padding-left: 14px;
+    border-radius: 20px;
+  }
+
+  .number {
+    font-size: 32px;
+  }
+
+  h4 {
+    font-size: 32px;
+  }
+
+  .line-1,
+  .line-2,
+  .line-3 {
+    gap: 5px;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 360px) {
+  .box-1 {
+    max-width: 240px;
+  }
+
+  .box-2 {
+    width: 170px;
+    height: 150px;
+    right: -5px;
+    bottom: -10px;
+    padding-left: 10px;
+  }
+
+  .number {
+    font-size: 28px;
+  }
+}
