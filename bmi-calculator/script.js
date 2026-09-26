@@ -1,39 +1,50 @@
+    // Declare and initialize variables
 let personName = "Evans Emmanuel";
-let weightKg = 95;
+let weightKg = 75;
 let heightM = 2;
 
-// Calculate the square of the height and store the result in a new variable called heightSquared.
+
+          // Perform arithmetic operations:
+   // The formula for BMI is Weight (kg)/(Height (m)×Height (m)).
+
+   // Calculate the square of the height and store the result in a new variable called heightSquared.
 let heightSquared = heightM * heightM;
 
-// Calculate the BMI and store the result in a new variable called bmi.
-let bmi = weightKg /  heightSquared;
+   // Calculate the BMI and store the result in a new variable called bmi.
+let bmi = weightKg / heightSquared;
 
-// Use the standard BMI categories to determine the person's status.
+
+          // . Perform comparison operations:
+  // Use the standard BMI categories to determine the person's status.
 let isUnderweight = bmi < 18.5 
 let isNormalWeight = bmi >= 18.5 && bmi < 25; 
 let isOverweight = bmi >= 25
 
 
+          // . Perform logical operations:
+   // Use logical operators to check for a specific health profile.
+   // The person receives a "High Risk" alert if they are Overweight OR if their weight is over 90 kg.
+  // Create a new boolean variable called isHighRisk that checks both of these conditions using a logical operator (||).
+let isHighRisk = weightKg > 90 || isOverweight;
+
+
 // // Display the results in the console:
 // console.log(bmi < 18.5 ? "Underweight" : bmi >= 18.5 && bmi < 25 ? "NormalWeight" : "Overweight")
 
+         // Display the results in the console:
 
-// Use logical operators to check for a specific health profile.
-// The person receives a "High Risk" alert if they are Overweight OR if their weight is over 90 kg.
-// Create a new boolean variable called isHighRisk that checks both of these conditions using a logical operator (||).
-let isHighRisk = weightKg > 90 || isOverweight;
-// console.log(isHighRisk ? "High Risk A" : "")
+// Use console.log() or DOM manipulation method to print the following information to the browser's developer console. Combine strings and variables for clear output.
 
 console.log("BMI RESULT")
 console.log("---------------------------");
 console.log(personName)
 console.log("BMI = " + bmi.toFixed(2));
-// console.log(bmi < 18.5 ? "Underweight" : bmi >= 18.5 && bmi < 25 ? "NormalWeight" : "Overweight")
-// console.log(isHighRisk ? "High Risk Alert" : "");
-console.log("Underweight:", isUnderweight);
-console.log("Normal Weight:", isNormalWeight);
-console.log("Overweight:", isOverweight);
-console.log("High Risk Alert:", isHighRisk);
+console.log(bmi < 18.5 ? "Underweight" : bmi >= 18.5 && bmi < 25 ? "NormalWeight" : "Overweight")
+console.log(isHighRisk ? "High Risk Alert" : "Not High Risk")
+// console.log("Underweight:", isUnderweight);
+// console.log("Normal Weight:", isNormalWeight);
+// console.log("Overweight:", isOverweight);
+// console.log("High Risk Alert:", isHighRisk);
 
 
 
