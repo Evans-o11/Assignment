@@ -1,0 +1,185 @@
+body {
+    background-color: #0b0712; /* Deep, near-black purple */
+    background-image: 
+        radial-gradient(circle at 50% 50%, #1a0f2e 0%, #0b0712 100%),
+        linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)); /* Subtle depth layers */
+    color: #e2dcf0; /* Soft, readable ghostly white */
+    font-family: 'Cinzel Decorative', 'Georgia', serif; /* Gothic, mystical font feel */
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    
+    /* Perfect Center Alignment (Viewport Centered) */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+}
+
+/* Mystical & Horror Form Container */
+form {
+    background: rgba(18, 11, 30, 0.75); /* Translucent dark purple */
+    border: 2px solid #ffd700; /* Gold accent border */
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 
+        0 0 20px rgba(138, 43, 226, 0.3), /* Purple aura */
+        inset 0 0 15px rgba(0, 0, 0, 0.6); /* Internal shadow for depth */
+    backdrop-filter: blur(8px); /* Modern frosted-glass look */
+    width: 100%;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Fields Layout */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center-aligns fields internally */
+    width: 100%;
+}
+
+/* Labels */
+label {
+    font-size: 0.9rem;
+    color: #ffd700; /* Gold accents */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+    text-shadow: 0 0 5px rgba(255, 215, 0, 0.4);
+}
+
+/* Standard Inputs & Textareas */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea,
+select {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: rgba(11, 7, 18, 0.9); /* Dark background */
+    border: 1px solid #8a2be2; /* Neon purple border */
+    border-radius: 6px;
+    color: #ffd700; /* Gold typing text */
+    font-family: inherit;
+    font-size: 1rem;
+    transition: all 0.3s ease-in-out;
+    box-sizing: border-box;
+    text-align: center; /* Centers the placeholder and user input */
+}
+
+/* Input Placeholders */
+input::placeholder,
+textarea::placeholder {
+    color: rgba(226, 220, 240, 0.4); /* Ghostly faint white */
+}
+
+/* Input Focus State (The Active Glow) */
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: #ffd700; /* Switches to gold on focus */
+    box-shadow: 
+        0 0 10px #8a2be2, 
+        0 0 20px rgba(255, 215, 0, 0.2);
+    background-color: #160d29;
+}
+
+/* Gothic Ritual Button */
+button, 
+input[type="submit"] {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #4b0082 0%, #1a0f2e 100%);
+    border: 1px solid #ffd700;
+    border-radius: 6px;
+    color: #ffd700;
+    font-family: inherit;
+    font-size: 1.1rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Button Hover State */
+button:hover,
+input[type="submit"]:hover {
+    background: #ffd700;
+    color: #0b0712; /* Inverts colors for impact */
+    box-shadow: 0 0 15px #ffd700;
+    transform: translateY(-2px);
+}
+
+/* Button Active Press State */
+button:active,
+input[type="submit"]:active {
+    transform: translateY(1px);
+}
+
+
+
+/* The dark overlay covering the whole screen */
+.modal-overlay {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75); /* Dark transparent background */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* The actual pop-up box styling */
+.modal-box {
+  background-color: #1a1a1a; /* Dark premium background */
+  color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 400px;
+  width: 85%;
+  border: 2px solid #ff4a4a; /* Red warning border */
+  box-shadow: 0 10px 30px rgba(255, 74, 74, 0.2);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.modal-box h2 {
+  margin-top: 0;
+  font-size: 22px;
+  color: #ff4a4a;
+}
+
+.modal-box p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 15px 0 25px 0;
+}
+
+/* The "I Obey" button styling */
+.modal-box button {
+  background-color: #ff4a4a;
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.modal-box button:hover {
+  background-color: #d13232;
+}

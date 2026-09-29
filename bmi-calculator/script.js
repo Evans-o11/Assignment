@@ -16,7 +16,7 @@ let bmi = weightKg / heightSquared;
 
           // . Perform comparison operations:
   // Use the standard BMI categories to determine the person's status.
-let isUnderweight = bmi < 18.5 
+let isUnderweight = bmi < 18.5;
 let isNormalWeight = bmi >= 18.5 && bmi < 25; 
 let isOverweight = bmi >= 25
 

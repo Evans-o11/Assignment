@@ -1,0 +1,20 @@
+<!-- let theNumber = Number(prompt("Input A Number"))
+if (Number.isNaN(theNumber)) {
+console.log("Inputed Value Is Nan"  )
+  }else{
+console.log("Your number is the square root" + theNumber * theNumber)
+} -->
+
+Here is the line-by-line breakdown of exactly what happens when JavaScript runs
+your code.
+
+Line 1: let theNumber = Number(prompt("Input A Number"))This single
+line actually does three major things, working from the inside out:prompt("Input
+A Number")What it does: Pops up a small window on the screen with the text
+"Input A Number" and an input box.The catch: Whatever the user types into that
+box comes back to JavaScript as a string (text), even if they type a number like
+5. It comes back as "5".Number(...)What it does: This is a built-in tool that
+converts things into official mathematical numbers.How it handles inputs:If the
+user typed "5", it converts it into the actual number 5.If the user typed
+"hello", JavaScript cannot turn that into a number, so it outputs a special
+value called NaN (Not-a-Number)
