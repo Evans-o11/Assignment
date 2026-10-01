@@ -9,4 +9,7 @@ A collection of  my front-end practice projects.
 - [Grid Assignment](https://evans-o11.github.io/Assignment/GridAssignment/)
 - [Overlap Image Assignment](https://evans-o11.github.io/Assignment/overlapimage%20assignment/)
 - [Spin Assignment](https://evans-o11.github.io/Assignment/spin%20assignment/)
--[Fortune Teller](https://github.com/Evans-o11/Assignment/tree/main/Fortune%20Teller/)
+- [Fortune Teller](https://github.io/Evans-o11/Assignment/tree/main/Fortune%20Teller/)
+
+
+
