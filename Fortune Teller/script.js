@@ -1,8 +1,3 @@
-
-
-
-
-
 const fortunes = [
   "Your inner fire will turn inward, boiling the blood in your veins until you beg for the chill of the grave.",
   "A headless ram walks in your future dreams; when it turns to face you, it wears your own skin.",
@@ -201,3 +196,21 @@ resetBtn.addEventListener("click", function () {
 
 // Math.floor(Math.random() * fortunes.length);
 
+
+
+// Rebuilt Oracle's Table with 3-card readings, search, sort and reset
+
+// - Switch from form submit to a click listener on the Reveal button
+// - Expand the fortunes array from 8 to 36 entries
+// - Pick 3 distinct fortunes per reading (while loop + includes + push)
+// - Build the summary and Past/Present/Future cards with DOM methods
+//   instead of innerHTML strings
+// - Show Blessed/Cursed as a styled status pill
+// - Save each reading to pastReadings as an object and render the
+//   Past Readings list
+// - Add Explore the Cosmos: archive list, case-insensitive search with
+//   find() and filter(), keyword highlighting with <mark>, and an
+//   empty-search message
+// - Add Sort A to Z using a sorted copy of the fortunes array
+// - Add a Reset button that restores the page to its starting state
+// - Update index.html and style.css for the new sections and components
