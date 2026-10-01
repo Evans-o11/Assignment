@@ -1,59 +1,98 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cursed Constellations</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    
-    <h1>Reveal Your Fate</h1>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>The Oracle's Table</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <h1>The Oracle's Table</h1>
+      <p class="sub">Give your name. The cards will do the rest.</p>
 
-    <!-- Mystical Input Form -->
-    <form id="fateForm">
-        <div class="form-group">
-            <label for="userName">Mortal Name</label>
-            <input type="text" id="userName" placeholder="Enter your name..."  autocomplete="off">
-        </div>
-
-        <div class="form-group">
-            <label for="zodiacSign">Zodiac Alignment</label>
-            <select id="zodiacSign" required>
-                <option value="" disabled selected>Choose your sign...</option>
-                <option value="Aries">Aries (The Ram)</option>
-                <option value="Taurus">Taurus (The Bull)</option>
-                <option value="Gemini">Gemini (The Twins)</option>
-                <option value="Cancer">Cancer (The Crab)</option>
-                <option value="Leo">Leo (The Lion)</option>
-                <option value="Virgo">Virgo (The Virgin)</option>
-                <option value="Libra">Libra (The Scales)</option>
-                <option value="Scorpio">Scorpio (The Scorpion)</option>
-                <option value="Sagittarius">Sagittarius (The Archer)</option>
-                <option value="Capricorn">Capricorn (The Goat)</option>
-                <option value="Aquarius">Aquarius (The Water Bearer)</option>
-                <option value="Pisces">Pisces (The Fish)</option>
+      <section aria-labelledby="formTitle">
+        <h2 id="formTitle">Your Details</h2>
+        <div class="row">
+          <div>
+            <label for="name">Name</label>
+            <input
+              id="name"
+              type="text"
+              placeholder="Type your name"
+              autocomplete="given-name"
+            />
+          </div>
+          <div>
+            <label for="sign">Zodiac sign</label>
+            <select id="sign">
+              <option>Aries</option>
+              <option>Taurus</option>
+              <option>Gemini</option>
+              <option>Cancer</option>
+              <option>Leo</option>
+              <option>Virgo</option>
+              <option>Libra</option>
+              <option>Scorpio</option>
+              <option>Sagittarius</option>
+              <option>Capricorn</option>
+              <option>Aquarius</option>
+              <option>Pisces</option>
             </select>
+          </div>
         </div>
+        <button id="revealBtn" type="button">Reveal My Fate</button>
+        
+      </section>
 
-        <button type="submit">Consult The Cosmos</button>
-    </form>
-
-    <!-- Dedicated Destiny Zone -->
-    <div class="destiny-zone" id="destinyZone">
-        <h2 class="destiny-title">🔮 The Destiny Zone 🔮</h2>
-        <div class="destiny-output" id="destinyOutput">
-            <!-- Output dynamic text here -->
+      <section
+        id="destinyZone"
+        aria-live="polite"
+        aria-labelledby="destinyTitle"
+      >
+        <h2 id="destinyTitle">Destiny Zone</h2>
+        <div id="destinyContent">
+          <p class="empty">
+            Enter your name and reveal your fate to fill this space.
+          </p>
         </div>
-    </div>
-    <!-- <div>
-        <h2>Explore The cosmos</h2>
-        <input type="text" name="searchInput" id="SearchInput"
-         placeholder="Search the archive (try 'wind'...) ">
-    </div>
-    <input type="button"> -->
+      </section>
 
+      <section aria-labelledby="pastTitle">
+        <h2 id="pastTitle">Past Readings</h2>
+        <ul id="history">
+          <li class="empty" style="list-style: none">
+            No readings yet this session.
+          </li>
+        </ul>
+      </section>
 
+      <section aria-labelledby="cosmosTitle">
+        <h2 id="cosmosTitle">Explore the Cosmos</h2>
+        <div class="bar">
+          <input
+            id="searchInput"
+            type="text"
+            placeholder="Search a keyword, like wind or email"
+            aria-label="Search fortunes"
+          />
+          <button id="searchBtn" type="button">Search</button>
+          <button id="sortBtn" type="button" class="ghost">Sort A to Z</button>
+        </div>
+        <p id="searchResult"></p>
+        <ul id="archive"></ul>
+        
+      </section>
+      <button id="resetBtn" type="button" class="ghost">Reset</button>
+    </main>
     <div id="customModal" class="modal-overlay">
   <div class="modal-box">
     <h2>⚠️ Divine Decree</h2>
@@ -63,12 +102,8 @@
 </div>
 
     <script src="script.js"></script>
-</body>
-</html
-
-
-
-
+  </body>
+</html>
 
 
 

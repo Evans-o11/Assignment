@@ -1,185 +1,308 @@
+:root {
+  --void: #0d0618;
+  --plum: #1c0f33;
+  --violet: #3b1f6b;
+  --gold: #e2b857;
+  --gold-soft: #f3dc9c;
+  --mist: #cfc4e6;
+  --blood: #d0566f;
+  --display: "Cinzel Decorative", Georgia, serif;
+  --body: "Cormorant Garamond", Georgia, serif;
+  color-scheme: dark;
+  box-sizing: border-box;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+html {
+  scroll-padding-top: env(safe-area-inset-top, 0px);
+}
 body {
-    background-color: #0b0712; /* Deep, near-black purple */
-    background-image: 
-        radial-gradient(circle at 50% 50%, #1a0f2e 0%, #0b0712 100%),
-        linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)); /* Subtle depth layers */
-    color: #e2dcf0; /* Soft, readable ghostly white */
-    font-family: 'Cinzel Decorative', 'Georgia', serif; /* Gothic, mystical font feel */
-    margin: 0;
-    padding: 20px;
-    box-sizing: border-box;
-    
-    /* Perfect Center Alignment (Viewport Centered) */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    min-height: 100vh;
+  margin: 0;
+  min-height: 100vh;
+  color: var(--mist);
+  font: 20px/1.55 var(--body);
+  background: radial-gradient(
+      ellipse at 50% -10%,
+      var(--violet) 0%,
+      var(--plum) 35%,
+      var(--void) 75%
+    )
+    fixed var(--void);
 }
-
-/* Mystical & Horror Form Container */
-form {
-    background: rgba(18, 11, 30, 0.75); /* Translucent dark purple */
-    border: 2px solid #ffd700; /* Gold accent border */
-    border-radius: 12px;
-    padding: 40px;
-    box-shadow: 
-        0 0 20px rgba(138, 43, 226, 0.3), /* Purple aura */
-        inset 0 0 15px rgba(0, 0, 0, 0.6); /* Internal shadow for depth */
-    backdrop-filter: blur(8px); /* Modern frosted-glass look */
-    width: 100%;
-    max-width: 450px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+main {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 32px 20px 64px;
 }
-
-/* Fields Layout */
-.form-group {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center-aligns fields internally */
-    width: 100%;
+h1,
+h2 {
+  font-family: var(--display);
+  color: var(--gold);
+  font-weight: 700;
+  margin: 0;
+  text-shadow: 0 0 18px rgba(226, 184, 87, 0.45);
 }
-
-/* Labels */
+h1 {
+  font-size: clamp(2rem, 7vw, 3.4rem);
+  text-align: center;
+  line-height: 1.15;
+}
+.sub {
+  text-align: center;
+  font-style: italic;
+  margin: 10px 0 36px;
+  color: var(--gold-soft);
+}
+h2 {
+  font-size: 1.4rem;
+  margin-bottom: 14px;
+}
+section {
+  border: 1px solid rgba(226, 184, 87, 0.35);
+  border-radius: 14px;
+  padding: 24px;
+  margin-bottom: 28px;
+  background: rgba(13, 6, 24, 0.6);
+  box-shadow: 0 0 30px rgba(59, 31, 107, 0.5);
+}
 label {
-    font-size: 0.9rem;
-    color: #ffd700; /* Gold accents */
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 8px;
-    text-shadow: 0 0 5px rgba(255, 215, 0, 0.4);
+  display: block;
+  font-weight: 600;
+  color: var(--gold-soft);
+  margin-bottom: 4px;
 }
-
-/* Standard Inputs & Textareas */
-input[type="text"],
-input[type="email"],
-input[type="password"],
-textarea,
+input,
 select {
-    width: 100%;
-    padding: 12px 15px;
-    background-color: rgba(11, 7, 18, 0.9); /* Dark background */
-    border: 1px solid #8a2be2; /* Neon purple border */
-    border-radius: 6px;
-    color: #ffd700; /* Gold typing text */
-    font-family: inherit;
-    font-size: 1rem;
-    transition: all 0.3s ease-in-out;
-    box-sizing: border-box;
-    text-align: center; /* Centers the placeholder and user input */
-}
-
-/* Input Placeholders */
-input::placeholder,
-textarea::placeholder {
-    color: rgba(226, 220, 240, 0.4); /* Ghostly faint white */
-}
-
-/* Input Focus State (The Active Glow) */
-input:focus,
-textarea:focus,
-select:focus {
-    outline: none;
-    border-color: #ffd700; /* Switches to gold on focus */
-    box-shadow: 
-        0 0 10px #8a2be2, 
-        0 0 20px rgba(255, 215, 0, 0.2);
-    background-color: #160d29;
-}
-
-/* Gothic Ritual Button */
-button, 
-input[type="submit"] {
-    width: 100%;
-    padding: 14px;
-    background: linear-gradient(135deg, #4b0082 0%, #1a0f2e 100%);
-    border: 1px solid #ffd700;
-    border-radius: 6px;
-    color: #ffd700;
-    font-family: inherit;
-    font-size: 1.1rem;
-    font-weight: bold;
-    letter-spacing: 2px;
-    cursor: pointer;
-    text-transform: uppercase;
-    transition: all 0.2s ease;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-}
-
-/* Button Hover State */
-button:hover,
-input[type="submit"]:hover {
-    background: #ffd700;
-    color: #0b0712; /* Inverts colors for impact */
-    box-shadow: 0 0 15px #ffd700;
-    transform: translateY(-2px);
-}
-
-/* Button Active Press State */
-button:active,
-input[type="submit"]:active {
-    transform: translateY(1px);
-}
-
-
-
-/* The dark overlay covering the whole screen */
-.modal-overlay {
-  display: none; /* Hidden by default */
-  position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.75); /* Dark transparent background */
+  padding: 11px 14px;
+  font: inherit;
+  color: var(--gold-soft);
+  background: var(--void);
+  border: 1px solid rgba(226, 184, 87, 0.4);
+  border-radius: 8px;
+}
+input:focus-visible,
+select:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+button {
+  font: 600 1.05rem var(--body);
+  cursor: pointer;
+  padding: 11px 22px;
+  border-radius: 8px;
+  color: var(--void);
+  background: linear-gradient(180deg, var(--gold-soft), var(--gold));
+  border: 0;
+}
+button:hover {
+  box-shadow: 0 0 18px rgba(226, 184, 87, 0.6);
+}
+button.ghost {
+  background: transparent;
+  color: var(--gold);
+  border: 1px solid var(--gold);
+}
+.summary {
+  font-size: 1.25rem;
+  margin: 0 0 20px;
+}
+.summary b {
+  color: var(--gold-soft);
+}
+.status {
+  font-family: var(--display);
+  padding: 2px 12px;
+  border-radius: 99px;
+  border: 1px solid currentColor;
+  white-space: nowrap;
+}
+.Blessed {
+  color: var(--gold);
+}
+.Cursed {
+  color: var(--blood);
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  perspective: 900px;
+}
+.card {
+  min-height: 190px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  border: 1px solid var(--gold);
+  border-radius: 12px;
+  background: linear-gradient(160deg, var(--violet), var(--void));
+  box-shadow: 0 0 20px rgba(226, 184, 87, 0.25) inset;
+  animation: flip 0.7s ease both;
+}
+.card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.card:nth-child(3) {
+  animation-delay: 0.4s;
+}
+.card small {
+  color: var(--gold);
+  font-family: var(--display);
+  font-size: 0.8rem;
+}
+.card p {
+  margin: 10px 0;
+  font-style: italic;
+  color: var(--gold-soft);
+}
+@keyframes flip {
+  from {
+    transform: rotateY(90deg);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+.empty {
+  font-style: italic;
+  opacity: 0.75;
+  margin: 0;
+}
+.bar {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+.bar input {
+  flex: 1 1 200px;
+  width: auto;
+}
+ul {
+  margin: 0;
+  padding-left: 22px;
+}
+li {
+  margin: 4px 0;
+}
+mark {
+  background: rgba(226, 184, 87, 0.3);
+  color: var(--gold-soft);
+  padding: 0 2px;
+  border-radius: 3px;
+}
+#searchResult {
+  margin: 0 0 16px;
+  min-height: 1.5em;
+}
+#history li {
+  margin-bottom: 8px;
+}
+
+
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at center,
+              rgba(20, 0, 0, 0.15) 0%,
+              rgba(0, 0, 0, 0.75) 100%);
+  backdrop-filter: blur(1px) saturate(0.6);
+  -webkit-backdrop-filter: blur(1px) saturate(0.6);
   justify-content: center;
   align-items: center;
   z-index: 1000;
 }
 
-/* The actual pop-up box styling */
+.modal-overlay.show {
+  display: flex;
+}
+
+/* The box: see-through, cold, faintly bleeding */
 .modal-box {
-  background-color: #1a1a1a; /* Dark premium background */
-  color: #ffffff;
-  padding: 30px;
-  border-radius: 12px;
+  background: rgba(10, 4, 6, 0.72);
+  color: #b9a7a7;
+  padding: 34px 28px 28px;
+  border-radius: 4px;
   text-align: center;
   max-width: 400px;
   width: 85%;
-  border: 2px solid #ff4a4a; /* Red warning border */
-  box-shadow: 0 10px 30px rgba(255, 74, 74, 0.2);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border: 1px solid rgba(140, 20, 20, 0.55);
+  box-shadow: 0 0 25px rgba(140, 0, 0, 0.35),
+              inset 0 0 40px rgba(0, 0, 0, 0.8);
+  font-family: Georgia, "Times New Roman", serif;
+  animation: creepIn 0.9s ease-out;
 }
 
 .modal-box h2 {
-  margin-top: 0;
-  font-size: 22px;
-  color: #ff4a4a;
+  margin: 0;
+  font-size: 24px;
+  font-weight: normal;
+  letter-spacing: 3px;
+  color: #a31212;
+  text-shadow: 0 0 8px rgba(163, 18, 18, 0.7);
+  animation: flicker 4s infinite;
 }
 
 .modal-box p {
-  font-size: 16px;
-  line-height: 1.5;
-  margin: 15px 0 25px 0;
+  font-size: 17px;
+  font-style: italic;
+  line-height: 1.6;
+  margin: 18px 0 26px;
+  color: #a89494;
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.9);
 }
 
-/* The "I Obey" button styling */
+/* Button: barely there until you hover */
 .modal-box button {
-  background-color: #ff4a4a;
-  color: white;
-  border: none;
-  padding: 10px 24px;
-  font-size: 14px;
-  font-weight: bold;
+  background: rgba(60, 0, 0, 0.35);
+  color: #a31212;
+  border: 1px solid rgba(140, 20, 20, 0.6);
+  padding: 10px 30px;
+  font-size: 13px;
+  letter-spacing: 3px;
   text-transform: uppercase;
-  border-radius: 6px;
+  border-radius: 2px;
   cursor: pointer;
-  transition: background 0.2s ease;
+  width: auto;
+  box-shadow: none;
+  transition: all 0.4s ease;
 }
 
 .modal-box button:hover {
-  background-color: #d13232;
+  background: rgba(110, 0, 0, 0.55);
+  color: #e04040;
+  box-shadow: 0 0 15px rgba(200, 0, 0, 0.5);
 }
+
+/* @media (max-width: 620px) {
+  .row,
+  .cards {
+    grid-template-columns: 1fr;
+  }
+  .card {
+    min-height: 130px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .card {
+    animation: none;
+  }
+} */
